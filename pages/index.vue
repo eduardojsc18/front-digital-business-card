@@ -1,13 +1,18 @@
 <template>
-    <h1 class="text-3xl font-bold underline bg-red-500 font-raleway">
-        Digital Businessa Card
+    <h1 class="text-3xl font-bold underline font-raleway">
+        Conteudo
     </h1>
 </template>
 
-<script setup>
-
+<script>
+export default {
+    name: "index",
+    layout: 'default',
+}
 </script>
 
-<style lang="scss" scoped>
-
+<style lang="postcss">
+.test{
+    @apply bg-black
+}
 </style>

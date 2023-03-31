@@ -1,9 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    
+
     app: {
       head: {
-        title: 'front-digital-business-card',
+        title: 'Erika Queiroz | Fisioterapeuta e Instrutura de Pilates',
           htmlAttrs: {
             lang: 'pt-br'
           },
@@ -12,8 +12,8 @@ export default defineNuxtConfig({
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
             { hid: 'description', name: 'description', content: '' },
             { name: 'format-detection', content: 'telephone=no' },
-            { name: 'theme-color', media: '(prefers-color-scheme: light)', content: '#00000' },
-            { name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#FFF' },
+            { name: 'theme-color', media: '(prefers-color-scheme: light)', content: '#E6CCB2' },
+            { name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#69462F' },
             { name: 'apple-mobile-web-app-capable', content: 'yes' },
             { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
           ],
