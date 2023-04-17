@@ -1,7 +1,7 @@
 <template>
-    <div class="flex flex-col min-h-screen">
+    <div class="flex flex-col min-h-screen font-raleway">
         <TheHeader />
-        <main class="flex-grow bg-green-100">
+        <main class="flex-grow bg-white">
             <slot />
         </main>
         <TheFooter />
@@ -14,12 +14,6 @@ import TheFooter from "~/components/layouts/TheFooter.vue";
 
 export default {
     name: "default",
-    components: {TheFooter, TheHeader},
+    components: { TheFooter, TheHeader },
 }
 </script>
-
-<style lang="postcss">
-.test {
-    @apply bg-black
-}
-</style>

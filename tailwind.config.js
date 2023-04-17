@@ -9,9 +9,10 @@ module.exports = {
     "./app.vue",
   ],
   theme: {
-    
+
     fontFamily: {
       'raleway': ['"Raleway"', 'sans-serif'],
+      'merriweather': ['"Merriweather"', 'sans-serif'],
     },
 
     extend: {

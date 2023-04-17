@@ -1,6 +1,6 @@
 <template>
-    <div class="bg-red-600">
-        Cabeçalho
+    <div class="flex justify-between">
+        
     </div>
 </template>
 
@@ -9,6 +9,3 @@ export default {
     name: "TheHeader",
 }
 </script>
-
-<style lang="postcss">
-</style>
