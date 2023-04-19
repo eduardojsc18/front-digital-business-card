@@ -1,10 +1,13 @@
 <template>
-    <div class="flex flex-col min-h-screen font-raleway">
-        <TheHeader />
-        <main class="flex-grow bg-white">
-            <slot />
-        </main>
-        <TheFooter />
+    <div class="flex transition-all transform-gpu">
+        <div id="menu" class="flex-shrink-0 transition-all"/>
+        <div class="flex-shrink-0 shadow-md w-full flex flex-col min-h-screen font-raleway">
+            <TheHeader />
+            <main class="flex-grow bg-white">
+                <slot />
+            </main>
+            <TheFooter />
+        </div>
     </div>
 </template>
 
