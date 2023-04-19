@@ -1,5 +1,5 @@
 <template>
-    <div class="z-[999] relative grid place-items-center">
+    <div class="z-[9999] relative grid place-items-center">
         <button
             @click="clickButtonOpenMenu()"
             class="z-10 w-12 h-12 relative grid place-items-center drop rounded-full bg-palette-100/70 text-palette-900 transition-all duration-500 border-0 ring-0 focus:border-0 focus:ring-0 focus:outline-palette-600"
