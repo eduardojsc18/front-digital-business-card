@@ -1,7 +1,7 @@
 <template>
     <div class="relative max-w-xl mx-auto">
-        <div class="w-full h-[350px] bg-gradient-to-tl to-palette-100 from-palette-400 shadow-inner relative transition-all duration-700" :class="{'!h-screen': !transitionLoadPage}">
-            <div v-if="transitionLoadPage" class="flex justify-between p-4">
+        <div class="z-auto w-full h-[350px] bg-gradient-to-tl to-palette-100 from-palette-400 shadow-inner relative transform-gpu transition-all duration-700" :class="{'!h-screen': !transitionLoadPage}">
+            <div v-if="transitionLoadPage" class="absolute w-full flex justify-between p-4">
                 <ButtonMenu />
                 <ButtonShared />
             </div>
@@ -20,7 +20,7 @@
                 </div>
             </Transition>
         </div>
-        <div v-if="transitionLoadPage" class="z-0 -mt-[310px] px-10">
+        <div v-if="transitionLoadPage" class="z-0 -mt-[300px] px-10">
             <div class="w-full mx-auto overflow-hidden rounded-b-2xl">
                 <img class="z-0 w-full h-full drop-shadow-md" src="@/assets/img/erikaquerioz-fisioterapeuta-resize.png" alt="">
             </div>
