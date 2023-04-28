@@ -33,6 +33,6 @@ export default defineNuxtConfig({
     },
     modules: ['nuxt-gtag'],
     gtag: {
-        id: process.env.NUXT_PUBLIC_GTAG_ID
+        id: 'G-CKRGQWZPQY'
     }
 })
