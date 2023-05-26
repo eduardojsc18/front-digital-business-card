@@ -1,9 +1,9 @@
 <template>
-    <div class="flex transition-all overflow-x-hidden transform-gpu">
-        <div id="menu" class="flex-shrink-0 transition-all"/>
-        <div class="flex-shrink-0 w-full flex flex-col min-h-screen font-raleway">
+    <div class="antialiased flex items-start transform-gpu bg-gradient-to-tl to-palette-100 from-palette-100">
+        <div id="menu" class="flex-shrink-0 self-stretch"/>
+        <div class="flex-shrink-0 w-full md:max-w-lg mx-auto flex flex-col min-h-screen font-raleway relative">
             <TheHeader />
-            <main class="flex-grow bg-white">
+            <main class="flex-grow">
                 <slot />
             </main>
             <TheFooter />

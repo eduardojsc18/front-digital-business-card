@@ -1,5 +1,5 @@
 <template>
-    <div class="z-[9999] relative grid place-items-center">
+    <div class="z-[99999] relative grid place-items-center">
         <button
             @click="clickButtonOpenMenu()"
             class="z-10 w-12 h-12 relative grid place-items-center drop rounded-full bg-palette-100/70 text-palette-900 border-0 ring-0 focus:border-0 focus:ring-0 focus:outline-palette-600 active:scale-95 transition-all duration-500 "
@@ -13,9 +13,11 @@
             </svg>
         </button>
         <Teleport to="#menu">
-            <Transition enter-active-class="transition ease-in-out duration-300" enter-from-class="opacity-0 -ml-[300px]" enter-to-class="opacity-100 ml-0" leave-active-class="transition ease-in-out duration-300" leave-from-class="opacity-100 ml-0" leave-to-class="opacity-0 -ml-[300px]">
-                <div v-show="showMenu" class="h-full w-[300px] transition-all bg-palette-50/10 shadow-[inset_-2px_0px_10px_0px_#00000015]">
-
+            <Transition enter-active-class="transition-all transform-gpu duration-700" enter-from-class="-translate-x-[300px] -ml-[300px]" enter-to-class="translate-x-0 ml-0" leave-active-class="transition-all transform-gpu duration-500" leave-from-class="translate-x-0 ml-0" leave-to-class="-translate-x-[300px] -ml-[300px]">
+                <div v-show="showMenu" class="min-h-[200vh] antialiased mt-4 w-[300px] bg-white rounded-tr-3xl shadow-[inset_-2px_0px_10px_0px_#00000015]">
+                    <div class="h-screen min-w-full p-5 space-y-5 overflow-y-auto">
+                        <button class="p-5 w-full shadow shadow-palette-900/10 text-palette-500 font-medium rounded-3xl" v-for="i in 5">Erika Queiroz</button>
+                    </div>
                 </div>
             </Transition>
         </Teleport>

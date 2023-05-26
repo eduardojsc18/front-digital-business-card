@@ -12,15 +12,6 @@ import ButtonMenu from "~/components/layouts/ButtonMenu.vue";
 export default {
     name: "TheHeader",
     components: {ButtonMenu, ButtonShared},
-    data() {
-        return{
-            transitionLoadPage: false
-        }
-    },
-    mounted() {
-        setTimeout(() => {
-            this.transitionLoadPage = true
-        }, 500)
-    }
+    props: {transitionLoadPage: Boolean}
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
-    <footer class="bg-yellow-200">
-
+    <footer class="text-center pt-10 pb-3">
+        ©{{ new Date().getFullYear() }} Todos os direitos reservados
     </footer>
 </template>
 
