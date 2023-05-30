@@ -24,19 +24,10 @@
     </div>
 </template>
 
-<script>
-export default {
-    name: "ButtonMenu",
-    data() {
-        return {
-            showMenu: false,
-        }
-    },
-    methods: {
-        clickButtonOpenMenu() {
-            this.showMenu = !this.showMenu
-            document.body.style.overflowX = this.showMenu ? "hidden" : "auto"
-        }
-    }
+<script setup>
+const showMenu = ref(false)
+function clickButtonOpenMenu() {
+    showMenu.value = !showMenu.value
+    document.body.style.overflowX = showMenu.value ? "hidden" : "auto"
 }
 </script>

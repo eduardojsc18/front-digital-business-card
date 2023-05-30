@@ -1,5 +1,5 @@
 <template>
-    <div class="flex items-center mt-5">
+    <section class="flex items-center mt-5">
         <a href="">
             <div class="bg-[#dcf8c6] rounded-full py-1 pl-1 pr-3 shadow flex gap-2 relative">
                 <div class="flex-shrink-0 bg-white/50 rounded-full p-2">
@@ -12,11 +12,11 @@
                 </div>
             </div>
         </a>
-    </div>
+    </section>
 </template>
 
-<script>
-export default {
-    name: "ProfileFastContact",
-}
+<script setup>
+const props = defineProps({
+    loading: {type: Boolean, default: false}
+})
 </script>

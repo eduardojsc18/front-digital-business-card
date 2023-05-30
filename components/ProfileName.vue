@@ -16,10 +16,8 @@
     </section>
 </template>
 
-<script>
-
-
-export default {
-    name: 'ProfileName'
-}
+<script setup>
+const props = defineProps({
+    loading: {type: Boolean, default: false}
+})
 </script>

@@ -1,5 +1,5 @@
 <template>
-    <div class="mt-14">
+    <section class="mt-14">
         <p class="text-2xl font-bold text-palette-900 leading-tight"> Agende sua avaliação com um profissional especializada! </p>
         <div class="mt-6 -ml-10 -mr-5 flex flex-col gap-3">
             <a :href="makeLinkWhatsapp()">
@@ -42,33 +42,14 @@
                 </div>
             </a>
         </div>
-    </div>
-<!--    <Teleport to="body">-->
-<!--        <Transition enter-active-class="transition-all transform-gpu ease-in-out duration-1000" enter-from-class="translate-y-full" enter-to-class="-translate-y-3">-->
-<!--            <div v-show="transitionLoadPage" class="fixed right-6 bottom-6 z-50">-->
-<!--                <ButtonWhatsapp />-->
-<!--            </div>-->
-<!--        </Transition>-->
-<!--    </Teleport>-->
+    </section>
 </template>
-<script>
-export default {
-    name: "ProfileContact",
-    data() {
-        return{
-            transitionLoadPage: false
-        }
-    },
-    mounted() {
-        setTimeout(() => {
-            this.transitionLoadPage = true
-        }, 1000)
-    },
-    methods: {
-        makeLinkWhatsapp() {
-            return 'https://api.whatsapp.com/send?phone=5511977895608&text=' +
-                'Olá Dra. Erika Queiroz! Gostaria de agendar uma consulta com você....'
-        }
-    }
+<script setup>
+const props = defineProps({
+    loading: {type: Boolean, default: false}
+})
+function makeLinkWhatsapp() {
+    return 'https://api.whatsapp.com/send?phone=5511977895608&text=' +
+        'Olá Dra. Erika Queiroz! Gostaria de agendar uma consulta com você....'
 }
 </script>
