@@ -6,12 +6,12 @@
                 Erika
                 <span class="relative">
                     Queiroz
-                    <a href="https://www.crefito3.org.br/dsn/inscritos/pesquisa.html" target="_blank" class="absolute top-full mt-0 text-palette-900 right-0 text-[10px] font-thin leading-none">
+                    <a href="https://www.crefito3.org.br/dsn/inscritos/pesquisa.html" target="_blank" class="absolute top-full mt-2 text-palette-900 right-0 text-[10px] font-thin leading-none">
                         (CREFITO: 376404-F)
                     </a>
                 </span>
             </span>
-            <span class="block w-36 h-0.5 rounded-full mt-0 bg-palette-500" />
+            <span class="block w-40 h-0.5 rounded-full -ml-2 mt-1.5 bg-palette-400" />
         </h1>
     </section>
 </template>

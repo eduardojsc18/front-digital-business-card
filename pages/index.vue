@@ -1,5 +1,5 @@
 <template>
-    <div :class="!loadPage ? 'h-screen touch-none' : 'h-[280px]' " class="z-0 relative transition-[height] transform-gpu antialiased duration-700">
+    <div :class="!loadPage ? 'h-screen touch-none' : 'h-[280px] md:h-[350px]' " class="z-0 relative transition-[height] transform-gpu antialiased duration-700">
         <div v-show="!loadPage" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <div class="relative grid place-items-center">
                 <div class="w-12 h-12 rounded-full absolute border border-solid border-palette-50"/>
@@ -10,11 +10,11 @@
             </div>
         </div>
     </div>
-    <div :class="{'touch-none': !loadPage}" class="flex-grow w-full bg-white rounded-t-[40px] rounded-b-md px-10 pb-10 shadow-[0_-10px_20px_-5px_#25191125]">
+    <div v-show="loadPage" class="flex-grow w-full bg-white rounded-t-[35px] rounded-b-md px-10 md:px-12 pb-10 shadow-[0_-10px_20px_-5px_#25191125]">
         <ProfilePicture :loading="loadPage" />
         <ProfileName />
         <ProfileProfession />
-        <ProfileFastContact />
+        <ProfileQuickInfo />
         <ProfileAbout />
         <ProfileService />
         <ProfileContact />
@@ -26,13 +26,12 @@ import ProfilePicture from "~/components/ProfilePicture.vue";
 import ProfileName from "~/components/ProfileName.vue";
 import ProfileContact from "~/components/ProfileContact.vue";
 import ProfileProfession from "~/components/ProfileProfession.vue";
-import ProfileFastContact from "~/components/ProfileFastContact.vue";
 import ProfileAbout from "~/components/ProfileAbout.vue";
 import ProfileService from "~/components/ProfileService.vue";
+import ProfileQuickInfo from "~/components/ProfileQuickInfo.vue";
 
 definePageMeta({
     layout: "default",
-    name: 'index'
 });
 
 const loadPage = ref(false)
