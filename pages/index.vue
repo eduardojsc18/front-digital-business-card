@@ -10,13 +10,14 @@
             </div>
         </div>
     </div>
-    <div v-show="loadPage" class="flex-grow w-full bg-white rounded-t-[35px] rounded-b-md px-10 md:px-12 pb-10 shadow-[0_-10px_20px_-5px_#25191125]">
+    <div v-show="loadPage" class="flex-grow w-full bg-white rounded-t-[35px] rounded-b-md px-10 pb-10 shadow-[0_-10px_20px_-5px_#25191125]">
         <ProfilePicture :loading="loadPage" />
         <ProfileName />
         <ProfileProfession />
         <ProfileQuickInfo />
         <ProfileAbout />
         <ProfileService />
+        <ProfilePlaceCare />
         <ProfileContact />
     </div>
 </template>

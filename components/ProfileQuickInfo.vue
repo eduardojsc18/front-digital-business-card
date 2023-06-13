@@ -4,7 +4,7 @@
         <Swiper
             :slidesPerView="'auto'"
             :space-between="25"
-            class="!-mx-12 !py-6 !px-12"
+            class="!-mx-10 !py-6 !px-12"
         >
             <SwiperSlide class="!w-auto !transition-all">
                 <a href="">
