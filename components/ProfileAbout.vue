@@ -1,13 +1,23 @@
 <template>
-    <section class="mt-14">
-        <p class="text-2xl font-bold text-palette-900 leading-tight"> Minhas especialidades </p>
-        <div class="mt-6">
-            <div class="relative pb-5" v-for="(attendance, index) in attendanceList">
-                <div class="z-10 absolute shadow w-5 h-5 top-1 left-0 rounded-full bg-palette-100" />
-                <div v-if="(index + 1) % attendanceList.length" class="z-0 absolute h-full left-[9px] top-2.5 w-[2px] bg-palette-50/50"/>
-                <div class="ml-8 space-y-1">
-                    <p class="text-palette-800 text-lg font-bold tracking-wide">{{ attendance.name }}</p>
-                    <p class="text-palette-700 text-sm">{{ attendance.description }}</p>
+    <section class="mt-20 relative">
+        <div class="absolute w-[250px] -top-16 -ml-10 h-[calc(100%+100px)] overflow-hidden">
+            <div class="absolute top-0 -left-[80px] w-[250px] h-full bg-palette-50/20 rounded-bl-none rounded-full"/>
+        </div>
+        <div class="relative">
+            <h3>
+                <span class="block text-4xl font-bold text-palette-1050">Minhas</span>
+                <span class="block text-4xl font-bold text-palette-1050">Especialidades</span>
+            </h3>
+            <div class="relative flex gap-2 mt-6 py-8 px-5 bg-gradient-to-r from-transparent via-palette-50/20 to-palette-50/30 -mx-5 rounded-r-[35px]">
+                <div class="flex-shrink-0 z-10 sticky w-8 h-8 top-[50%] -translate-x-[10px] rounded-full shadow-inner bg-palette-100" />
+                <div class="flex-grow relative">
+                    <div class="z-0 absolute h-full -left-[35px] top-0 w-[3px] bg-palette-50/50"/>
+                    <div v-for="(attendance, index) in attendanceList" class="pb-8 last:pb-0">
+                        <p class="text-palette-1000 mt-1.5 text-[22px] font-bold tracking-wide ">
+                            {{ attendance.name }}
+                        </p>
+                        <p v-if="attendance.description" class="text-palette-700 text-sm">{{ attendance.description }}</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -19,7 +29,7 @@ const props = defineProps({
 })
 const attendanceList = computed(() => {
     return [
-        {id: 0, name: 'Fisioterapia ortopédica', description: ''},
+        {id: 0, name: 'Fisioterapia Ortopédica', description: ''},
         {id: 1, name: 'Liberação Miofascial e Dry-needling', description: ''},
         {id: 2, name: 'Terapia Manual', description: ''},
         {id: 3, name: 'Paralisia Facial', description: ''},
