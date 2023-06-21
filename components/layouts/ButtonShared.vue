@@ -22,7 +22,7 @@ onMounted(() => {
 @-webkit-keyframes slide-in-right {
     0% {
         -webkit-transform: translateX(1000px);
-        transform: translateX(1000px);
+        transform: translateX(100%);
         opacity: 0;
     }
     100% {
@@ -34,7 +34,7 @@ onMounted(() => {
 @keyframes slide-in-right {
     0% {
         -webkit-transform: translateX(1000px);
-        transform: translateX(1000px);
+        transform: translateX(100%);
         opacity: 0;
     }
     100% {
