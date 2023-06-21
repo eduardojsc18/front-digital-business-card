@@ -2,7 +2,7 @@
     <section class="mt-14">
         <h3 class="text-4xl font-bold text-palette-1050"> Agende agora sua avaliação! </h3>
         <p class="mt-2 font-medium text-palette-1050">E tenha um atendimento com uma especialista na área </p>
-        <div class="mt-6 -ml-12 -mr-5 flex flex-col gap-3">
+        <div class="mt-6 -ml-10 flex flex-col gap-3">
             <a :href="makeLinkWhatsapp()">
                 <div class="bg-[#dcf8c6] rounded-r-full pl-10 p-3 shadow flex gap-5 relative">
                     <div class="flex-shrink-0 bg-white/50 rounded-full p-3">
