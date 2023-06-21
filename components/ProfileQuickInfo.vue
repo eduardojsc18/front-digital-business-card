@@ -7,7 +7,7 @@
             class="!-mx-10 !py-6 !px-12"
         >
             <SwiperSlide class="!w-auto !transition-all">
-                <a href="">
+                <a :href="makeLinkWhatsapp()" target="_blank" rel=”noreferrer” title="Clique para agendar sua avaliação diretamente em meu Whatsapp">
                     <div class="bg-ironstone-100 rounded-full py-1 pl-1 pr-5 shadow shadow-neutral-300/10 flex gap-3 relative">
                         <div class="flex-shrink-0 bg-white/50 rounded-full w-14 h-14 grid place-items-center">
                             <svg class="w-8 h-8 text-neutral-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" >
@@ -21,7 +21,8 @@
                 </a>
             </SwiperSlide>
             <SwiperSlide class="!w-auto !transition-all">
-                <div class="bg-orange-100 rounded-full py-1 pl-1 pr-5 shadow shadow-neutral-300/10 flex gap-3 relative">
+                <a :href="makeLinkWhatsapp()" target="_blank" rel=”noreferrer” title="Clique para agendar sua avaliação domiciliar diretamente em meu Whatsapp">
+                    <div class="bg-orange-100 rounded-full py-1 pl-1 pr-5 shadow shadow-neutral-300/10 flex gap-3 relative">
                     <div class="flex-shrink-0 bg-white/50 rounded-full w-14 h-14 grid place-items-center">
                         <svg class="w-8 h-8 text-neutral-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" >
                             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
@@ -31,22 +32,25 @@
                         <p class="text-base font-semibold text-neutral-600 whitespace-nowrap">Avaliação domiciliar</p>
                     </div>
                 </div>
+                </a>
             </SwiperSlide>
             <SwiperSlide class="!w-auto !transition-all">
-                <div class="bg-yellow-100 rounded-full py-1 pl-1 pr-5 shadow shadow-neutral-300/10 flex gap-3 relative">
-                    <div class="flex-shrink-0 bg-white/50 rounded-full w-14 h-14 grid place-items-center">
-                        <svg class="w-8 h-8 text-neutral-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                        </svg>
+                <a :href="makeLinkWhatsapp()" target="_blank" rel=”noreferrer” title="Clique para verificar a disponibilidade em sua região diretamente em meu Whatsapp">
+                    <div class="bg-yellow-100 rounded-full py-1 pl-1 pr-5 shadow shadow-neutral-300/10 flex gap-3 relative">
+                        <div class="flex-shrink-0 bg-white/50 rounded-full w-14 h-14 grid place-items-center">
+                            <svg class="w-8 h-8 text-neutral-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                            </svg>
+                        </div>
+                        <div class="self-center flex-grow ">
+                            <p class="text-base font-semibold text-neutral-600 whitespace-nowrap">Guarulhos/SP e Região</p>
+                        </div>
                     </div>
-                    <div class="self-center flex-grow ">
-                        <p class="text-base font-semibold text-neutral-600 whitespace-nowrap">Guarulhos/SP e Região</p>
-                    </div>
-                </div>
+                </a>
             </SwiperSlide>
             <SwiperSlide class="!w-auto !transition-all">
-                <a href="">
+                <a :href="makeLinkWhatsapp()" target="_blank" rel=”noreferrer” title="Clique para agendar sua avaliação diretamente em meu Whatsapp">
                     <div class="bg-[#dcf8c6] rounded-full py-1 pl-1 pr-5 shadow shadow-neutral-300/10 flex gap-3 relative">
                         <div class="flex-shrink-0 bg-white/50 rounded-full w-14 h-14 grid place-items-center">
                             <svg class="w-8 h-8 fill-neutral-600" xmlns="http://www.w3.org/2000/svg" stroke-width="1" width="24" height="24" viewBox="0 0 24 24">
@@ -60,7 +64,7 @@
                 </a>
             </SwiperSlide>
             <SwiperSlide class="!w-auto !transition-all">
-                <a href="">
+                <a href="tel:011977895608" target="_blank" rel=”noreferrer” title="Clique para agendar sua avaliação através do meu telefone">
                     <div class="bg-blue-100 rounded-full py-1 pl-1 pr-5 shadow shadow-neutral-300/10 flex gap-3 relative">
                         <div class="flex-shrink-0 bg-white/50 rounded-full w-14 h-14 grid place-items-center">
                             <svg class="w-8 h-8 text-neutral-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor">
@@ -81,6 +85,11 @@
 <script setup>
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
+
+function makeLinkWhatsapp() {
+    return 'https://api.whatsapp.com/send?phone=5511977895608&text=' +
+        'Olá Dra. Erika Queiroz! Gostaria de agendar uma consulta com você....'
+}
 </script>
 <style scoped>
 .swiper-slide-active{

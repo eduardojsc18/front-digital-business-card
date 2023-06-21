@@ -19,5 +19,6 @@ import ProfileProfession from "~/components/ProfileProfession.vue";
 import ProfileAbout from "~/components/ProfileAbout.vue";
 import ProfileService from "~/components/ProfileService.vue";
 import ProfileQuickInfo from "~/components/ProfileQuickInfo.vue";
+import ProfilePlaceCare from "~/components/ProfilePlaceCare.vue";
 
 </script>

@@ -4,10 +4,10 @@
             <div class="absolute top-0 -left-[80px] w-[250px] h-full bg-palette-50/20 rounded-bl-none rounded-full"/>
         </div>
         <div class="relative">
-            <h3>
-                <span class="block text-4xl font-bold text-palette-1050">Minhas</span>
-                <span class="block text-4xl font-bold text-palette-1050">Especialidades</span>
-            </h3>
+            <h2 class="text-4xl font-bold text-palette-1050">
+                Minhas<br>
+                Especialidades
+            </h2>
             <div class="relative flex gap-2 mt-6 py-8 px-5 bg-gradient-to-r from-transparent via-palette-50/20 to-palette-50/30 -mx-5 rounded-r-[35px]">
                 <div class="flex-shrink-0 z-10 sticky w-8 h-8 top-[50%] -translate-x-[10px] rounded-full shadow-inner bg-palette-100" />
                 <div class="flex-grow relative">
