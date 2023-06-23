@@ -23,6 +23,7 @@ export default defineNuxtConfig({
                 {name: 'apple-mobile-web-app-capable', content: 'yes'},
                 {name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent'},
                 {name: 'google-site-verification', content: 'NpBr31H0XCatpIVHmPwE6FK_4TWluY3Pe3OTN_4OAs8'},
+                {name: 'msvalidate.01', content: '7EBC86C963D48A9DC86E6320A8E481BA'},
             ],
             script: [
                 {async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-CKRGQWZPQY'},
