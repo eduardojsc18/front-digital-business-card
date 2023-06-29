@@ -12,7 +12,7 @@ export default defineNuxtConfig({
             ],
             meta: [
                 {name: 'google-site-verification', content: 'NpBr31H0XCatpIVHmPwE6FK_4TWluY3Pe3OTN_4OAs8'},
-                {name: 'msvalidate.01', content: '7EBC86C963D48A9DC86E6320A8E481BA '},
+                {name: 'msvalidate.01', content: '7EBC86C963D48A9DC86E6320A8E481BA'},
                 {charset: 'utf-8'},
                 {name: 'viewport', content: 'width=device-width, initial-scale=1'},
                 {name: 'description', content: 'Fisioterapeuta especializada em Ortopédica, Liberação Miofacial, Dry-needling e muito mais. Acesse e agende sua consulta à domicílio agora mesmo!'},
