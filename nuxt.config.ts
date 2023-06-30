@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import headMetaTags from "./utils/headMetaTags";
+
 export default defineNuxtConfig({
+    build: undefined,
     app: {
         head: {
             htmlAttrs: {lang: 'pt-br'},
@@ -8,53 +11,33 @@ export default defineNuxtConfig({
                 {rel: 'preconnect', href: 'https://fonts.googleapis.com'},
                 {rel: 'preconnect', href: 'https://fonts.googleapis.com', crossorigin: 'anonymous'},
             ],
-            meta: [
-                {name: 'google-site-verification', content: 'NpBr31H0XCatpIVHmPwE6FK_4TWluY3Pe3OTN_4OAs8'},
-                {name: 'msvalidate.01', content: '7EBC86C963D48A9DC86E6320A8E481BA'},
-                {charset: 'utf-8'},
-                {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-                {
-                    name: 'description',
-                    content: 'Fisioterapeuta especializada em Ortopédica, Liberação Miofacial, Dry-needling e muito mais. Acesse e agende sua consulta à domicílio agora mesmo!'
-                },
-                {
-                    name: 'keywords',
-                    content: 'Dra. Erika Queiroz, CREFITO-7, Fisioterapia, Fisioterapia Ortopédica, Liberação Miofacial, Dry-needling, Terapia Manual, Paralisia Facial, Disfunção temporomandibular, Pilates solo, Pilates para gestante, Pilates, Quiropraxia, Home-care, atendimento domiciliar, fisioterapia domiciliar, Guarulhos, GRU, Guarulhos-SP, Fisio, Fisioterapeuta, São Paulo, Arujá, Itaquaquecetuba, São Miguel Paulista, Estou com dores, Preciso de um fisioterapeuta, Melhor fisioterapeuta, Fisioterapeuta mulher, Fisioterapeuta feminino, Instrutora de pilates, Atendimento Pediatrico, Pediatrico, Ped'
-                },
-                {name: 'robots', content: 'index'},
-                {name: 'format-detection', content: 'telephone=no'},
-                {name: 'theme-color', media: '(prefers-color-scheme: light)', content: '#E6CCB2'},
-                {name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#E6CCB2'},
-                {name: 'apple-mobile-web-app-capable', content: 'yes'},
-                {name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent'},
-                {property: 'og:locale', content: 'pt_BR'},
-                {property: 'og:type', content: 'website'},
-                {property: 'og:site_name', content: 'Fisioterapeuta Ortopédica'},
-                {property: 'og:url', content: 'https://fisioerikaqueiroz.vercel.app/'},
-                {property: 'og:title', content: 'Dra. Erika Queiroz - Fisioterapeuta Ortopédica - Guarulhos e Região'},
-                {property: 'og:description',content: 'Fisioterapeuta especializada em Ortopédica, Liberação Miofacial, Dry-needling e muito mais. Acesse e agende sua consulta à domicílio agora mesmo!'},
-                {property: 'og:image:alt', content: 'Dra. Erika Queiroz - Fisioterapeuta Ortopédica - Guarulhos e Região'},
-                {property: 'og:image:secure_url', content: 'https://fisioerikaqueiroz.vercel.app/img/dra-erika-queiroz-fisioterapeuta-especialista-ortopedista-pilates-guarulhos-63kb.jpg'},
-                {property: 'og:image:type', content: 'image/jpeg'},
-                {property: 'og:image:height', content: '400'},
-                {property: 'og:image:width', content: '200'},
-                {property: "og:image", content: 'https://fisioerikaqueiroz.vercel.app/img/dra-erika-queiroz-fisioterapeuta-especialista-ortopedista-pilates-guarulhos-63kb.jpg?w=400&amp;h=200'},
-                {property: 'og:image:type', content: 'image/jpeg'},
-                {property: 'og:image:height', content: '1280'},
-                {property: 'og:image:width', content: '640'},
-                {property: "og:image", content: 'https://fisioerikaqueiroz.vercel.app/img/dra-erika-queiroz-fisioterapeuta-especialista-ortopedista-pilates-guarulhos-63kb.jpg?w=1280&amp;h=640'},
-                {property: "twitter:card", content: 'summary_large_image'},
-                {property: "twitter:url", content: 'https://fisioerikaqueiroz.vercel.app/'},
-                {property: "twitter:title", content: 'Dra. Erika Queiroz - Fisioterapeuta Ortopédica - Guarulhos e Região'},
-                {property: "twitter:description",content: 'Fisioterapeuta especializada em Ortopédica, Liberação Miofacial, Dry-needling e muito mais. Acesse e agende sua consulta à domicílio agora mesmo!'},
-                {property: "twitter:image", content: 'https://fisioerikaqueiroz.vercel.app/img/dra-erika-queiroz-fisioterapeuta-especialista-ortopedista-pilates-guarulhos-63kb.jpg'},
-            ],
+            meta: headMetaTags,
             script: [
                 {async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-CKRGQWZPQY'},
                 {
                     hid: 'gtm',
                     innerHTML: `  window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-CKRGQWZPQY');`,
                     type: 'text/javascript'
+                },
+                {
+                    type: "application/ld+json",
+                    innerHTML: JSON.stringify({
+                        "@context": "https://fisioerikaqueiroz.vercel.app/",
+                        "@type": "Person",
+                        "headline": "Dra. Erika Queiroz - Fisioterapeuta Ortopedista",
+                        "image": [
+                            "https://fisioerikaqueiroz.vercel.app/profile/profile-erika-queiroz-fisioterapeuta-ortopedista-1x1.jpg",
+                            "https://fisioerikaqueiroz.vercel.app/profile/profile-erika-queiroz-fisioterapeuta-ortopedista-4x3.jpg",
+                            "https://fisioerikaqueiroz.vercel.app/profile/profile-erika-queiroz-fisioterapeuta-ortopedista-16x9.jpg"
+                        ],
+                        "author": [
+                            {
+                                "@type": "Person",
+                                "name": "Erika Queiroz",
+                                "url": "https://fisioerikaqueiroz.vercel.app/"
+                            }
+                        ]
+                    })
                 }
             ],
             title: 'Dra. Erika Queiroz - Fisioterapeuta Ortopédica - Guarulhos e Região',
@@ -66,9 +49,5 @@ export default defineNuxtConfig({
             tailwindcss: {},
             autoprefixer: {},
         },
-    },
-    // modules: ['nuxt-gtag'],
-    // gtag: {
-    //     id: 'G-CKRGQWZPQY'
-    // },
+    }
 })
