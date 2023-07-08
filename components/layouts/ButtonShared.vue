@@ -16,7 +16,7 @@ const animateButton = ref(false)
 onMounted(() => {
     setTimeout(() => {
         animateButton.value = true
-    }, 1000)
+    }, 1500)
 })
 </script>
 <style scoped>
@@ -26,7 +26,7 @@ onMounted(() => {
 }
 @-webkit-keyframes slide-in-right {
     0% {
-        -webkit-transform: translateX(1000px);
+        -webkit-transform: translateX(100%);
         transform: translateX(100%);
         opacity: 0;
     }

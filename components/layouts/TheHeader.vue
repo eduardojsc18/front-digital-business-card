@@ -1,5 +1,5 @@
 <template>
-    <header class="absolute w-full flex justify-end p-4">
+    <header class="absolute w-full flex justify-end p-4 overflow-hidden">
         <ButtonMenu v-if="false" />
         <ButtonShared />
     </header>

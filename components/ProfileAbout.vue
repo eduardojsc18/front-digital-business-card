@@ -9,7 +9,7 @@
                 Especialidades
             </h2>
             <div class="relative flex gap-2 mt-6 py-8 px-5 bg-gradient-to-r from-transparent via-palette-50/20 to-palette-50/30 -mx-5 rounded-r-[35px]">
-                <div class="flex-shrink-0 z-10 sticky w-8 h-8 top-[50%] -translate-x-[10px] rounded-full shadow-inner bg-palette-100" />
+                <div class="flex-shrink-0 z-10 sticky w-8 h-8 top-[70%] -translate-x-[10px] rounded-full shadow-inner bg-palette-100" />
                 <div class="flex-grow relative">
                     <div class="z-0 absolute h-full -left-[35px] top-0 w-[3px] bg-palette-50/50"/>
                     <div v-for="(attendance, index) in attendanceList" class="pb-8 last:pb-0">
