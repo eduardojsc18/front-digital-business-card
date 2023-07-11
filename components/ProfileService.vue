@@ -1,7 +1,7 @@
 <template>
     <section class="mt-14">
         <h3 class="text-4xl font-bold text-palette-1050"> Como funciona <br> os atendimentos?</h3>
-        <div class="flex flex-col mt-5">
+        <div class="mt-5 flex flex-col">
             <p>            # Após escolher a melhor data e local para o atendimento
             </p>
             <p>

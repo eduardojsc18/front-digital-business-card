@@ -1,5 +1,5 @@
 <template>
-    <footer class="text-center py-5">
+    <footer class="py-5 text-center">
         ©{{ new Date().getFullYear() }} Todos os direitos reservados
     </footer>
 </template>

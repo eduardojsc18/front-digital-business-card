@@ -1,10 +1,10 @@
 <template>
-    <div class="antialiased flex items-start transform-gpu bg-palette-100">
+    <div class="flex transform-gpu items-start antialiased bg-palette-100">
         <div id="menu" class="flex-shrink-0 self-stretch"/>
-        <div class="w-full min-h-screen">
-            <TransitionGroup enter-active-class="transition-all duration-1000 delay-100 ease-in-out transform-gpu" enter-from-class="opacity-0" enter-to-class="opacity-100" leave-active-class="transition-all duration-[1500ms] ease-in-out transform-gpu" leave-from-class="h-screen opacity-100" leave-to-class="h-[0vh] opacity-0">
+        <div class="min-h-screen w-full">
+            <TransitionGroup enter-active-class="transform-gpu transition-all delay-100 duration-1000 ease-in-out" enter-from-class="opacity-0" enter-to-class="opacity-100" leave-active-class="transform-gpu transition-all ease-in-out duration-[1500ms]" leave-from-class="h-screen opacity-100" leave-to-class="opacity-0 h-[0vh]">
                 <LoaderAnimation v-if="loading" :loading="loading"/>
-                <div v-else class="w-full max-w-lg mx-auto flex flex-col min-h-screen font-raleway relative">
+                <div v-else class="relative mx-auto flex min-h-screen w-full max-w-lg flex-col font-raleway">
                     <TheHeader/>
                     <main class="flex-grow w-full bg-white rounded-t-[40px] mt-[280px] md:mt-[400px] rounded-b-md px-10 pb-10 shadow-[0_-10px_20px_-5px_#25191110]">
                         <ProfilePicture/>
@@ -36,9 +36,8 @@ import ProfileName from "~/components/ProfileName.vue";
 import ProfileProfession from "~/components/ProfileProfession.vue";
 import LoaderAnimation from "~/components/LoaderAnimation.vue";
 
-const loading = ref(true)
-
 const nuxtApp = useNuxtApp()
+const loading = ref(true)
 
 nuxtApp.hook('page:start', () => {
     document.body.style.overflow = 'hidden'

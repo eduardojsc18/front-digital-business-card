@@ -1,21 +1,21 @@
 <template>
-    <div v-if="props.loading" class="touch-none w-full h-screen">
-        <div class="h-screen w-screen overflow-hidden grid place-items-center relative">
+    <div v-if="props.loading" class="h-screen w-full touch-none">
+        <div class="relative grid h-screen w-screen place-items-center overflow-hidden">
             <div class="max-md:absolute max-md:top-[40%]">
                 <div class="follow-the-leader-line space-y-1">
-                    <div class="bg-palette-500 border border-palette-200"/>
-                    <div class="bg-palette-500/80 border border-palette-200"/>
-                    <div class="bg-palette-500/70 border border-palette-200"/>
-                    <div class="bg-palette-500/60 border border-palette-200"/>
-                    <div class="bg-palette-500/50 border border-palette-200"/>
+                    <div class="border bg-palette-500 border-palette-200"/>
+                    <div class="border bg-palette-500/80 border-palette-200"/>
+                    <div class="border bg-palette-500/70 border-palette-200"/>
+                    <div class="border bg-palette-500/60 border-palette-200"/>
+                    <div class="border bg-palette-500/50 border-palette-200"/>
                 </div>
             </div>
             <!--        <div>-->
             <!--            <div class="relative grid place-items-center">-->
-            <!--                <div class="w-12 h-12 rounded-full absolute border border-solid border-palette-50"/>-->
-            <!--                <div class="w-12 h-12 rounded-full animate-spin absolute border border-solid border-palette-500 drop-shadow border-t-transparent"/>-->
+            <!--                <div class="absolute h-12 w-12 rounded-full border border-solid border-palette-50"/>-->
+            <!--                <div class="absolute h-12 w-12 animate-spin rounded-full border border-solid border-t-transparent drop-shadow border-palette-500"/>-->
             <!--            </div>-->
-            <!--            <div class="text-sm mt-7 animate-pulse">-->
+            <!--            <div class="mt-7 animate-pulse text-sm">-->
             <!--                Carregando-->
             <!--            </div>-->
             <!--        </div>-->
