@@ -1,9 +1,9 @@
 <template>
-    <div class="flex transform-gpu items-start antialiased bg-palette-100">
-        <div id="menu" class="flex-shrink-0 self-stretch"/>
+    <div id="content-site" class="flex transform-gpu items-start antialiased bg-palette-100" :class="{'overflow-hidden': loading}">
+        <div id="menu" class="flex-shrink-0 self-stretch" />
         <div class="min-h-screen w-full">
-            <TransitionGroup enter-active-class="transform-gpu transition-all delay-100 duration-1000 ease-in-out" enter-from-class="opacity-0" enter-to-class="opacity-100" leave-active-class="transform-gpu transition-all ease-in-out duration-[1500ms]" leave-from-class="h-screen opacity-100" leave-to-class="opacity-0 h-[0vh]">
-                <LoaderAnimation v-if="loading" :loading="loading"/>
+            <TransitionGroup enter-active-class="transform-gpu transition-all delay-500 duration-1000 ease-in-out" enter-from-class="opacity-0" enter-to-class="opacity-100" leave-active-class="transform-gpu delay-500 transition-all origin-top ease-in-out duration-[1500ms]" leave-from-class="h-screen opacity-100" leave-to-class="opacity-0 h-[0vh]">
+                <LoaderAnimation v-if="loading" :loading="loading" />
                 <div v-else class="relative mx-auto flex min-h-screen w-full max-w-lg flex-col font-raleway">
                     <TheHeader/>
                     <main class="flex-grow w-full bg-white rounded-t-[40px] mt-[280px] md:mt-[400px] rounded-b-md px-10 pb-10 shadow-[0_-10px_20px_-5px_#25191110]">
@@ -40,13 +40,11 @@ const nuxtApp = useNuxtApp()
 const loading = ref(true)
 
 nuxtApp.hook('page:start', () => {
-    document.body.style.overflow = 'hidden'
     loading.value = true;
 })
 nuxtApp.hook('app:mounted', () => {
     setTimeout(() => {
         loading.value = false
-        document.body.style.overflow = 'auto'
-    },600)
+    },500)
 })
 </script>

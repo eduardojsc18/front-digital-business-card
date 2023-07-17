@@ -1,9 +1,10 @@
 <template>
-    <Transition enter-active-class="transform-gpu transition-all delay-200 duration-300 ease-in-out" enter-from-class="translate-x-full opacity-0" enter-to-class="translate-x-0 opacity-100">
+    <Transition enter-active-class="transform-gpu transition-all delay-[1500ms] duration-300 ease-in-out" enter-from-class="translate-x-full opacity-0" enter-to-class="translate-x-0 opacity-100">
         <button
-            v-if="animateButton"
+            v-show="animateButton"
             class="relative z-50 grid h-12 w-12 place-items-center rounded-full transition-all slide-in-right bg-palette-100/70 text-palette-900 active:scale-95"
             type="button"
+            @click="shareImage"
             title="Compartilhar meu contato"
         >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
@@ -13,10 +14,26 @@
     </Transition>
 </template>
 <script setup>
+import ImgShared from '~/img/dra-erika-queiroz-fisioterapeuta-especialista-ortopedista-pilates-guarulhos.jpg'
+
 const animateButton = ref(false)
 onMounted(() => {
-    setTimeout(() => {
-        animateButton.value = true
-    }, 1500)
+    animateButton.value = true
 })
+
+
+async function shareImage() {
+    const blob = await (await fetch(ImgShared)).blob();
+    const file = new File(
+        [blob],
+        `erika-queiroz-fisioterapeuta-ortopedista-instrutora-pilates.jpeg`,
+        {type: blob.type}
+    );
+    await navigator.share({
+        title: `Dra. Erika Queiroz - Fisioterapeuta Ortopedista e Instrutura de Pilates`,
+        text: `Fisioterapeuta especializada em Ortopédica, Liberação Miofacial, Dry-needling e muito mais. Acesse e agende sua consulta à domicílio agora mesmo!`,
+        files: [file],
+    })
+}
+
 </script>

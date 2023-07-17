@@ -1,6 +1,6 @@
 <template>
-    <div v-if="props.loading" class="h-screen w-full touch-none">
-        <div class="relative grid h-screen w-screen place-items-center overflow-hidden">
+    <div>
+        <div class="touch-none relative h-screen w-full grid place-items-center overflow-hidden">
             <div class="max-md:absolute max-md:top-[40%]">
                 <div class="follow-the-leader-line space-y-1">
                     <div class="border bg-palette-500 border-palette-200"/>
@@ -20,14 +20,9 @@
             <!--            </div>-->
             <!--        </div>-->
         </div>
-
     </div>
 </template>
 <script setup>
-//Props
-const props = defineProps({
-    loading: {type: Boolean, required: true}
-})
 </script>
 <style scoped>
 @-webkit-keyframes follow-the-leader {

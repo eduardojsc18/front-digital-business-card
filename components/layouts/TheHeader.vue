@@ -1,6 +1,6 @@
 <template>
     <header class="absolute flex w-full justify-end overflow-hidden p-4">
-        <ButtonMenu v-if="false" />
+<!--        <ButtonMenu />-->
         <ButtonShared />
     </header>
 </template>

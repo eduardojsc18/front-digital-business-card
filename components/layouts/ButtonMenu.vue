@@ -13,8 +13,11 @@
             </svg>
         </button>
         <Teleport to="#menu">
-            <Transition enter-active-class="transform-gpu transition-all duration-700" enter-from-class="-translate-x-[300px] -ml-[300px]" enter-to-class="ml-0 translate-x-0" leave-active-class="transform-gpu transition-all duration-500" leave-from-class="ml-0 translate-x-0" leave-to-class="-translate-x-[300px] -ml-[300px]">
-                <div v-show="showMenu" class="min-h-[200vh] antialiased w-[300px] bg-white shadow-[inset_-2px_0px_10px_0px_#00000015]">
+            <Transition
+                enter-active-class="transform-gpu transition-all duration-700" enter-from-class="-translate-x-[300px]" enter-to-class="ml-0 translate-x-0"
+                leave-active-class="transform-gpu transition-all duration-500" leave-from-class="ml-0 translate-x-0" leave-to-class="-translate-x-[300px]"
+            >
+                <div v-show="showMenu" class="absolute z-[99999] min-h-[200vh] antialiased w-[300px] bg-white shadow-[inset_-2px_0px_10px_0px_#00000015]">
                     <div class="h-screen min-w-full overflow-y-auto p-5 space-y-5">
 
                     </div>
@@ -26,9 +29,15 @@
 
 <script setup>
 const showMenu = ref(false)
+const contentSite = document.getElementById('content-site')
 
-watch(showMenu, (value) => {
-    document.body.style.overflow = value ? "hidden" : "auto"
-    document.body.style.overflowX = 'hidden'
+watch(() => showMenu.value, (value) => {
+    if (value) {
+        document.body.style.overflow = 'hidden'
+        contentSite.classList.add('overflow-x-hidden')
+    } else {
+        document.body.style.overflow = 'auto'
+        contentSite.classList.remove('overflow-x-hidden')
+    }
 })
 </script>
