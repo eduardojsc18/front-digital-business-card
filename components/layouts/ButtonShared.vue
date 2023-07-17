@@ -14,7 +14,7 @@
     </Transition>
 </template>
 <script setup>
-import ImgShared from '~/img/dra-erika-queiroz-fisioterapeuta-especialista-ortopedista-pilates-guarulhos.jpg'
+import ImgShared from '../../public/img/dra-erika-queiroz-fisioterapeuta-especialista-ortopedista-pilates-guarulhos.jpg'
 
 const animateButton = ref(false)
 onMounted(() => {
