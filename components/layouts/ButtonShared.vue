@@ -14,7 +14,7 @@
     </Transition>
 </template>
 <script setup>
-import ImgShared from '../../public/img/dra-erika-queiroz-fisioterapeuta-especialista-ortopedista-pilates-guarulhos.jpg'
+import ImgShared from '~/assets/img/dra-erika-queiroz-fisioterapeuta-especialista-ortopedista-pilates-guarulhos.jpg'
 
 const animateButton = ref(false)
 onMounted(() => {
@@ -30,9 +30,10 @@ async function shareImage() {
         {type: blob.type}
     );
     await navigator.share({
-        title: `Dra. Erika Queiroz - Fisioterapeuta Ortopedista e Instrutura de Pilates`,
-        text: `Fisioterapeuta especializada em Ortopédica, Liberação Miofacial, Dry-needling e muito mais. Acesse e agende sua consulta à domicílio agora mesmo!`,
         files: [file],
+        title: `Fisioterapeuta Ortopedista e Instrutura de Pilates`,
+        text: `Acesse e agende sua consulta à domicílio agora mesmo!`,
+        url: `https://fisioerikaqueiroz.vercel.app/`,
     })
 }
 
