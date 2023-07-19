@@ -33,7 +33,11 @@ async function shareImage() {
         files: [file],
         title: `Fisioterapeuta Ortopedista e Instrutura de Pilates`,
         text: `Acesse e agende sua consulta à domicílio agora mesmo!`,
-        url: `Fisioterapeuta Ortopedista e Instrutura de Pilates. &#10;&#10; Acesse e agende sua consulta à domicílio agora mesmo! &#10;&#10; https://fisioerikaqueiroz.vercel.app/`,
+        url: `
+
+        Fisioterapeuta Ortopedista e Instrutura de Pilates.
+
+        Acesse e agende sua consulta à domicílio agora mesmo!`,
     })
 }
 
