@@ -1,15 +1,15 @@
 <template>
-    <div id="content-site" class="flex transform-gpu items-start antialiased bg-palette-100" :class="{'overflow-hidden': loading}">
+    <div id="content-site" class="flex transform-gpu items-start antialiased bg-palette-100 dark:bg-palette-1000 transition-colors duration-500 delay-100" :class="{'overflow-hidden': loading}">
         <div id="menu" class="flex-shrink-0 self-stretch" />
         <div class="w-full min-h-screen">
             <TransitionGroup enter-active-class="transform-gpu transition-all delay-500 duration-1000 ease-in-out" enter-from-class="opacity-0" enter-to-class="opacity-100" leave-active-class="transform-gpu delay-500 transition-all origin-top ease-in-out duration-[1500ms]" leave-from-class="h-screen opacity-100" leave-to-class="opacity-0 h-[0vh]">
                 <LayoutPageLoadingAnimation v-if="loading" :loading="loading" />
                 <div v-else class="relative mx-auto flex min-h-screen w-full max-w-lg flex-col font-raleway">
-                    <header class="absolute flex w-full justify-end overflow-hidden p-4">
-                        <ButtonMenu />
+                    <header class="absolute flex w-full justify-between overflow-hidden p-4">
                         <ButtonShared />
+                        <ButtonDarkMode />
                     </header>
-                    <main class="flex-grow w-full bg-white rounded-t-[40px] mt-[280px] md:mt-[400px] rounded-b-md px-10 pb-10 shadow-[0_-10px_20px_-5px_#25191110]">
+                    <main class="flex-grow w-full bg-white dark:bg-palette-1050 rounded-t-[40px] mt-[280px] md:mt-[400px] rounded-b-md px-10 pb-10 shadow-[0_-10px_20px_-5px_#25191110] transition-colors duration-700 delay-200">
                         <ProfilePicture/>
                         <ProfileName/>
                         <ProfileProfession/>
@@ -39,6 +39,8 @@ import ProfileName from "~/components/ProfileName.vue";
 import ProfileProfession from "~/components/ProfileProfession.vue";
 import LayoutPageLoadingAnimation from "~/components/layout/LayoutPageLoadingAnimation.vue";
 import ButtonShared from "~/components/button/ButtonShared.vue";
+import ButtonMenu from "~/components/button/ButtonMenu.vue";
+import ButtonDarkMode from "~/components/button/ButtonDarkMode.vue";
 
 const nuxtApp = useNuxtApp()
 const loading = ref(true)

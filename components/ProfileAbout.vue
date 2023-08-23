@@ -4,7 +4,7 @@
             <div class="absolute top-0 h-full rounded-full rounded-bl-none -left-[80px] w-[250px] bg-palette-50/20"/>
         </div>
         <div class="relative">
-            <h2 class="text-4xl font-bold text-palette-1050">
+            <h2 class="text-4xl font-bold text-palette-1050 dark:text-palette-100">
                 Minhas<br>
                 Especialidades
             </h2>

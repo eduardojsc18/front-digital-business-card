@@ -1,5 +1,5 @@
 <template>
-    <Transition enter-active-class="transform-gpu transition-all delay-[2000ms] duration-300 ease-in-out" enter-from-class="translate-x-full opacity-0" enter-to-class="translate-x-0 opacity-100">
+    <Transition enter-active-class="transform-gpu transition-all delay-[2000ms] duration-300 ease-in-out" enter-from-class="-translate-x-full opacity-0" enter-to-class="translate-x-0 opacity-100">
         <button
             v-show="animateButton"
             class="relative z-50 grid h-12 w-12 place-items-center rounded-full transition-all slide-in-right bg-palette-100/70 text-palette-900 active:scale-95"
