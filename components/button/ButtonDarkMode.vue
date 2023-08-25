@@ -48,7 +48,7 @@
         </div>
     </Transition>
     <Teleport to="#content-site">
-        <div class="absolute top-10 right-10">
+        <div v-if="activeAnimate" class="absolute top-10 right-10">
             <div class="relative grid place-items-center">
                 <div class="z-[9999999] absolute w-[300vh] aspect-square rounded-full scale-0" :class="toggleDarkMode ? {'scale-up-center bg-palette-1000': activeAnimate} : {'scale-down-center bg-palette-100': activeAnimate}"></div>
             </div>
@@ -64,17 +64,27 @@
 const toggleDarkMode = ref(false)
 const activeAnimate = ref(false)
 const animateButton = ref(false)
+const browserColor = ref('#E6CCB2')
 
 onMounted(() => {
     animateButton.value = true
+})
+
+useHead({
+    meta: [
+        {name: 'theme-color', media: '(prefers-color-scheme: light)', content: browserColor.value},
+        {name: 'theme-color', media: '(prefers-color-scheme: dark)', content: browserColor.value},
+    ]
 })
 
 //Watch
 watch(() => toggleDarkMode.value, (value) => {
     if (value) {
         document.documentElement.classList.add('dark')
+        browserColor.value = '#4b3222'
     } else {
         document.documentElement.classList.remove('dark')
+        browserColor.value = '#E6CCB2'
     }
     activeAnimate.value = true
     setTimeout(() => {

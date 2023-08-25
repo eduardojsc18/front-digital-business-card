@@ -8,7 +8,7 @@ export default [
     {name: 'robots', content: 'index'},
     {name: 'format-detection', content: 'telephone=no'},
     {name: 'theme-color', media: '(prefers-color-scheme: light)', content: '#E6CCB2'},
-    {name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#E6CCB2'},
+    {name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#4b3222'},
     {name: 'apple-mobile-web-app-capable', content: 'yes'},
     {name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent'},
     {property: 'og:locale', content: 'pt_BR'},
